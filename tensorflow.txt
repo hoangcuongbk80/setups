@@ -1,2 +1,4 @@
+# Cuda 8.0; cuDNN 6.0; Tensorflow 1.4
+https://yangcha.github.io/Install-CUDA8/
 # launchpadlib 1.10.3 requires testresources
 sudo apt install python-testresources
