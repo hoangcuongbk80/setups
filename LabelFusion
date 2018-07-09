@@ -1,0 +1,12 @@
+ Installing Cuda 8.0 and nvidia-docker 1.0
+ 
+ # Convert ply to vtp for model
+ root@cc1c784347ba:~/labelfusion/scripts# directorPython convertPlyToVtp.py ~/labelfusion/data/object-meshes/object.ply
+ 
+ # Commands on directorPython window should be typed instead of copy and paste.
+ 
+ # openni2-camera-lcm doesn't work
+ install rgbd_ros_to_lcm (code from https://github.com/MobileManipulation/rgbd_ros_to_lcm), but need to modify 
+ CMakeLists.txt and package.xml
+ 
+ # Folder object-meshes containing object model files must be located at /LabelFusion/data/
