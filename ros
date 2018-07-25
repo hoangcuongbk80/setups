@@ -1,2 +1,14 @@
 # Openni2
 sudo apt-get install ros-kinetic-openni2-camera
+
+# install opencv
+sudo apt-get install ros-kinetic-opencv3
+# uninstall opencv
+sudo apt-get remove ros-kinetic-opencv3
+
+# How to use ros with CUDA enabled OpenCV: Having OpenCV compiled from source, installed to usr/local
+# link: https://answers.ros.org/question/242376/having-trouble-using-cuda-enabled-opencv-with-kinetic/?answer=242935#post-id-242935
+step 1: Remove opencv from ROS
+step 2: Download cv_bridge and cvTest from https://github.com/daniel-dsouza/vision_opencv
+step 3: Copy folder cv_bridge to catkin_ws/src and run catkin_make
+step 4: Change CMakeLists.txt of the project as format of CMakeLists.txt in cvTest
