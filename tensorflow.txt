@@ -2,3 +2,16 @@
 https://yangcha.github.io/Install-CUDA8/
 # launchpadlib 1.10.3 requires testresources
 sudo apt install python-testresources
+
+# How to Speeds up estimator.predict by preventing it from reloading the graph on each call to predict
+# In model
+if mode == tf.estimator.ModeKeys.PREDICT:
+    return tf.estimator.EstimatorSpec(mode=mode, predictions=predictions, 
+    export_outputs={"predictor_out": tf.estimator.export.PredictOutput(predictions)})
+# In main
+estimator_predictor = tf.contrib.predictor.from_estimator(fcn_estimator, serving_input_fn)
+predict_results = estimator_predictor({"rgb": self.rgb_img})
+pred = predict_results['classes'][0]
+pred_rgb = color_map(pred)
+cv2.imshow("predict", pred_rgb)
+cv2.waitKey(3)
