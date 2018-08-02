@@ -10,3 +10,10 @@
  CMakeLists.txt and package.xml
  
  # Folder object-meshes containing object model files must be located at /LabelFusion/data/
+ 
+ # Steps to operate the system:
+ $ cd ~/LabelFusion/docker
+ $ sudo sh docker_run.sh
+ $ cd labelfusion/data/
+ $ cd labelfusion/data/
+ Note that log file shouldn't have name original_log.lcmlog
