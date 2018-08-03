@@ -11,4 +11,6 @@ sudo apt-get remove ros-kinetic-opencv3
 step 1: Remove opencv from ROS
 step 2: Download cv_bridge and cvTest from https://github.com/daniel-dsouza/vision_opencv
 step 3: Copy folder cv_bridge to catkin_ws/src and run catkin_make
-step 4: Change CMakeLists.txt of the project as format of CMakeLists.txt in cvTest
+step 4: Change CMakeLists.txt of the project as format of CMakeLists.txt in cvTest#
+
+# To check cmake, open the file CMakeCache.txt gennerated in ~/catkin_ws/build
