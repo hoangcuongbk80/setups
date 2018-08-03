@@ -14,3 +14,8 @@ step 3: Copy folder cv_bridge to catkin_ws/src and run catkin_make
 step 4: Change CMakeLists.txt of the project as format of CMakeLists.txt in cvTest#
 
 # To check cmake, open the file CMakeCache.txt gennerated in ~/catkin_ws/build
+
+# When using CUDA 9.0 in ros kinetic might have a problem regarding to eigen3 library as
+""CUDACC_VER is no longer supported. Use CUDACC_VER_MAJOR, CUDACC_VER_MINOR, and CUDACC_VER_BUILD instead."" 
+is not valid in preprocessor expression..
+Solution: remove current eigen3 and install latest version as described in setups/eigen3.
