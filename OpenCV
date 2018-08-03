@@ -1,3 +1,11 @@
+# Download source of Opencv version 3.4.0 or greater
+
+# How to install
 https://github.com/BVLC/caffe/wiki/OpenCV-3.3-Installation-Guide-on-Ubuntu-16.04
+But, if installing version 3.3.0 might get the error:
+"CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+CUDA_nppi_LIBRARY (ADVANCED)"
+linked by target "opencv_cudev" in directory /home/aass/Hoang-Cuong/opencv-3.3.0/modules/cudev
 
 # To check version of CUDA built, Open the file CMakeCache.txt in build/
