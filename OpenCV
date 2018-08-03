@@ -1,1 +1,3 @@
 https://github.com/BVLC/caffe/wiki/OpenCV-3.3-Installation-Guide-on-Ubuntu-16.04
+
+# To check version of CUDA built, Open the file CMakeCache.txt in build/
