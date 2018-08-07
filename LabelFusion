@@ -1,6 +1,7 @@
  Installing Cuda 8.0 and nvidia-docker 1.0
  
  # Convert ply to vtp for model
+ object.ply should be Ascii (not binary)
  root@cc1c784347ba:~/labelfusion/scripts# directorPython convertPlyToVtp.py ~/labelfusion/data/object-meshes/object.ply
  
  # Commands on directorPython window should be typed instead of copy and paste.
