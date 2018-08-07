@@ -8,6 +8,12 @@
  # openni2-camera-lcm doesn't work
  install rgbd_ros_to_lcm (code from https://github.com/MobileManipulation/rgbd_ros_to_lcm), but need to modify 
  CMakeLists.txt and package.xml
+ Then, to record log file:
+ Run launch file in catkin
+ $ roslaunch rgbd_ros_to_lcm lcm_republisher.launch
+ In another terminal, run
+ $ lcm-logger
+ Log file will be save at ~/
  
  # Folder object-meshes containing object model files must be located at /LabelFusion/data/
  
