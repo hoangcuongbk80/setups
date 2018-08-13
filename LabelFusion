@@ -24,3 +24,13 @@
  $ cd labelfusion/data/
  $ cd labelfusion/data/
  Note that log file shouldn't have name original_log.lcmlog
+
+# To ignore table segmentation step, we should modify
+the function def initializeFields(self) of  the file modules/labelfusion/registration.py 
+
+self.aboveTablePolyData = None
+        if os.path.isfile(self.pathDict['reconstruction']):
+            print "loading above table pointcloud"
+            polyData = ioUtils.readPolyData(self.pathDict['reconstruction'])
+            self.aboveTablePolyData = filterUtils.transformPolyData(polyData, self.firstFrameToWorldTransform)
+            vis.updatePolyData(self.aboveTablePolyData, 'above table pointcloud', parent=self.visFolder, colorByName='RGB')
