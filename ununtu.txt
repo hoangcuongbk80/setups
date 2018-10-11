@@ -1,0 +1,2 @@
+ # To remove the folder with lock icon, need to run the following to fix your home directory permissions:
+ sudo chown -R $USER: $HOME
