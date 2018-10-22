@@ -1,3 +1,5 @@
+# openni2_launch
+sudo apt-get install ros-kinetic-openni2-launch
 # Openni2
 sudo apt-get install ros-kinetic-openni2-camera
 
