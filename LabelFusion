@@ -28,9 +28,31 @@
 # To ignore table segmentation step, we should modify
 the function def initializeFields(self) of  the file modules/labelfusion/registration.py 
 
-self.aboveTablePolyData = None
+def initializeFields(self):
+        self.visFolder = om.getOrCreateContainer('global registration')
+
+
+        if self.logFolder is None:
+            self.logFolder = "logs/scratch"
+
+        self.pathDict = utils.getFilenames(self.logFolder)
+        self.objectAlignmentResults = dict() # stores results of object alignment tool
+        self.objectAlignmentTool = None
+
+        # load the above table poly data if it exists
+        """ self.aboveTablePolyData = None
+        if os.path.isfile(self.pathDict['aboveTablePointcloud']):
+            print "loading above table pointcloud"
+            polyData = ioUtils.readPolyData(self.pathDict['aboveTablePointcloud'])
+            self.aboveTablePolyData = filterUtils.transformPolyData(polyData, self.firstFrameToWorldTransform)
+            vis.updatePolyData(self.aboveTablePolyData, 'above table pointcloud', parent=self.visFolder, colorByName='RGB') """
+
+        self.aboveTablePolyData = None
         if os.path.isfile(self.pathDict['reconstruction']):
             print "loading above table pointcloud"
             polyData = ioUtils.readPolyData(self.pathDict['reconstruction'])
             self.aboveTablePolyData = filterUtils.transformPolyData(polyData, self.firstFrameToWorldTransform)
             vis.updatePolyData(self.aboveTablePolyData, 'above table pointcloud', parent=self.visFolder, colorByName='RGB')
+
+        self.storedObjects = dict()
+        self.loadStoredObjects()
