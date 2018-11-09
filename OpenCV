@@ -1,6 +1,7 @@
 # Download source of Opencv version 3.4.0 or greater
 
 # How to install
+https://docs.opencv.org/3.4.0/d7/d9f/tutorial_linux_install.html
 https://github.com/BVLC/caffe/wiki/OpenCV-3.3-Installation-Guide-on-Ubuntu-16.04
 But, if installing version 3.3.0 might get the error:
 "CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
