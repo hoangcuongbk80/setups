@@ -1,5 +1,12 @@
 # Download latest version at https://bitbucket.org/eigen/eigen/downloads/
 
+# Check version
+check file eigen3/Eigen/src/Core/util/Macros.h
+ex: version 3.3.90 
+#define EIGEN_WORLD_VERSION 3
+#define EIGEN_MAJOR_VERSION 3
+#define EIGEN_MINOR_VERSION 90
+
 # How to remove previous version
 sudo rm -r -f path/eigen3
 ex: sudo rm -r -f /usr/include/eigen3
