@@ -14,7 +14,7 @@ if data_path[len(data_path)-1] != '/':
     exit()
 
 data = {}
-stop = False
+stop = True
 
 def load_image(addr):
     img = cv2.imread(addr, -1)
@@ -138,14 +138,15 @@ def find_region(img, classes_label, obj_id, row, col):
 def write_to_json(instance_img, label_img, img_number):    
     rows, cols = instance_img.shape
     regions = {}
-
+    classes_list = [5, 28, 85, 15, 83, 49, 64] # chair door books paper sofa screen
     edge_img = np.zeros((rows, cols), np.uint8)      
     
     for row in range(rows):
         for col in range(cols):
-            if is_edge_point(instance_img, row, col) == True:
-                edge_img[row, col] = instance_img[row, col]
-                #print(edge_img[row, col])
+            if label_img[row, col] in classes_list:
+                if is_edge_point(instance_img, row, col) == True:
+                    edge_img[row, col] = instance_img[row, col]
+                    #print(edge_img[row, col])
 
     edge_img = edge_downsample(edge_img)
 
@@ -186,7 +187,7 @@ def write_to_json(instance_img, label_img, img_number):
 instances_path = data_path + 'instances/'
 instances_addrs = glob.glob(instances_path + '*.png')
 
-#for i in range(50):
+#for i in range(10):
 for i in range(len(instances_addrs)):
     print 'Image: {}/{}'.format(i, len(instances_addrs))
     pos1 = len(instances_path)
