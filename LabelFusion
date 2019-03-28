@@ -60,3 +60,11 @@ def initializeFields(self):
 
         self.storedObjects = dict()
         self.loadStoredObjects()
+
+# If the number of object > 13, you need to change rendertrainingimages.py in LabelFusion/modules/labelfusion/:
+    def getColorFromIndex(self, objName):
+        objLabel = utils.getObjectLabel(self.objectData, objName)
+        #cuong
+        #return self.colors[objLabel][:3]
+        objLabel = objLabel / 10
+        return self.colors[objLabel][:3]
