@@ -68,3 +68,7 @@ def initializeFields(self):
         #return self.colors[objLabel][:3]
         objLabel = objLabel / 10
         return self.colors[objLabel][:3]
+
+# To modify camrera calibration paprameters, let change /home/aass/Hoang-Cuong/LabelFusion/scripts/prepareForObjectAlignment.py
+# call ElasticFusion
+os.system(path_to_ElasticFusion_executable + " -l ./" + lcmlog_filename + " -cal " + "/root/labelfusion//config/camera_calibration.txt")
