@@ -83,3 +83,16 @@ def setCameraInstrinsicsAsus(view):
     principalY = 237.822020
     focalLength = 639.445496
     setCameraIntrinsics(view, principalX, principalY, focalLength)
+    
+    # To change filenames of outputs to fit with format of YCB dataset
+    ## let modify /home/aass/Hoang-Cuong/LabelFusion/modules/labelfusion/utils.py
+    def convertImageIDToPaddedString(n, numCharacters=6):
+    ## and in other files replace (be careful)
+    _rgb.png to -color.png
+    _labels.png to -label.png
+    _depth.png to -depth.png
+    labels to label
+    rgb to color
+    "_" to "-" in /LabelFusion/modules/labelfusion/imagecapture.py
+    _utime.txt to -utime.txt in /LabelFusion/modules/labelfusion/rendertrainingimages.py
+    
