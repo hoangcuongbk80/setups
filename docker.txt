@@ -22,6 +22,9 @@ sudo docker rm $(sudo docker ps -a -q) # delete all stopped containers
 
 # Create and run a container
 sudo docker run --name mask-rcnn -it --rm -v /home/aass/Hoang-Cuong/Mask_RCNN:/code cuong/mask-rcnn /bin/bash
+# Build a docker image using GPU
+sudo nvidia-docker build --tag cuong/maskrcnn-gpu ./
+# Create and run a container using GPU
 
 ## ERROR and Solution:
 
