@@ -1,3 +1,4 @@
+## Common commands
 # https://docs.docker.com/get-started/part2/
 
 docker build -t friendlyhello .  # Create image using this directory's Dockerfile
@@ -16,10 +17,26 @@ docker login             # Log in this CLI session using your Docker credentials
 docker tag <image> username/repository:tag  # Tag <image> for upload to registry
 docker push username/repository:tag            # Upload tagged image to registry
 docker run username/repository:tag                   # Run image from a registry
+sudo docker stop $(sudo docker ps -a -q) # stops all running containers
+sudo docker rm $(sudo docker ps -a -q) # delete all stopped containers
 
-ERROR and Solution:
+# Create and run a container
+sudo docker run --name mask-rcnn -it --rm -v /home/aass/Hoang-Cuong/Mask_RCNN:/code cuong/mask-rcnn /bin/bash
+
+## ERROR and Solution:
 
 #WARNING: Error loading config file: /home/aass/.docker/config.json: open /home/aass/.docker/config.json: permission denied
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chmod g+rwx "/home/$USER/.docker" -R
 $USER is the username of the currently logged in user.
+
+### Example of downloading docker image and run code
+$ docker pull svponomarev/pcl_trunk
+$ docker run --name <CONTAINER_NAME> -it --rm -v <YOUR_DIRECTORY>:/code svponomarev/pcl_trunk /bin/bash
+ex: sudo docker run --name mypcl_test2 -it --rm -v /home/aass/Hoang-Cuong/temp/dockerfiles/pcl_trunk/test_projects/pcd_write:/code svponomarev/pcl_trunk /bin/bash
+/# cd /code
+/# mkdir build
+/# cd build
+/# cmake ..
+/# make
+/# ./pcd_write
