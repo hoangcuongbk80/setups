@@ -25,6 +25,9 @@ sudo docker run --name mask-rcnn -it --rm -v /home/aass/Hoang-Cuong/Mask_RCNN:/c
 # Build a docker image using GPU
 sudo nvidia-docker build --tag cuong/maskrcnn-gpu ./
 # Create and run a container using GPU
+sudo nvidia-docker run --name mask-rcnn -it --rm -v /home/aass/Hoang-Cuong/Mask_RCNN:/maskrcnn hoangcuongbk80/maskrcnn-gpu /bin/bash
+# Pull
+nvidia-docker pull hoangcuongbk80/maskrcnn-gpu:latest
 
 ## ERROR and Solution:
 
