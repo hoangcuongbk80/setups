@@ -1,0 +1,12 @@
+## Install bazel
+Download file bazel-0.18.0-installer-linux-x86_64.sh from https://github.com/bazelbuild/bazel/releases/tag/0.18.0
+chmod +x bazel-0.18.0-installer-linux-x86_64.sh
+./bazel-0.18.0-installer-linux-x86_64.sh --user
+export PATH="$PATH:$HOME/bin"
+
+## Clone and build tensorflow
+git clone https://github.com/tensorflow/tensorflow.git
+cd tensorflow
+git checkout r1.11
+./configure
+bazel build --jobs=6 --verbose_failures -c opt --copt=-mavx --copt=-mfpmath=both --copt=-msse4.2 //tensorflow:libtensorflow_cc.so
