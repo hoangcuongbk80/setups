@@ -1,4 +1,20 @@
-# Install pip
+## Install pip and pip3
 https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip
+# pip
 $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 $ python get-pip.py
+# pip3
+$ curl -sS https://bootstrap.pypa.io/get-pip.py >>setup.py
+$ python3 setup.py
+# check install
+$ pip show pip
+$ pip3 show pip
+
+## Install packages
+# Install specific package
+sudo pip install scikit-learn==0.17.1
+
+## Virtual environments
+
+# python3
+virtualenv -p python3 env
