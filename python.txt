@@ -1,0 +1,4 @@
+# Install pip
+https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip
+$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+$ python get-pip.py
