@@ -17,6 +17,7 @@ cv2.imshow("predict", pred_rgb)
 cv2.waitKey(3)
 
 ## Then Copy the following include headers and dynamic shared library to /usr/local/lib and /usr/local/include:
+https://github.com/tensorflow/tensorflow/issues/2412
 mkdir /usr/local/include/tf
 cp -r bazel-genfiles/ /usr/local/include/tf/
 cp -r tensorflow /usr/local/include/tf/
