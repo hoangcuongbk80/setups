@@ -15,3 +15,10 @@ pred = predict_results['classes'][0]
 pred_rgb = color_map(pred)
 cv2.imshow("predict", pred_rgb)
 cv2.waitKey(3)
+
+## Then Copy the following include headers and dynamic shared library to /usr/local/lib and /usr/local/include:
+mkdir /usr/local/include/tf
+cp -r bazel-genfiles/ /usr/local/include/tf/
+cp -r tensorflow /usr/local/include/tf/
+cp -r third_party /usr/local/include/tf/
+cp -r bazel-bin/libtensorflow_cc.so /usr/local/lib/
