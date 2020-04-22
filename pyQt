@@ -1,0 +1,8 @@
+# Install Qt
+https://lucidar.me/en/dev-c-cpp/how-to-install-qt-creator-on-ubuntu-16-04/
+sudo apt-get install build-essential
+sudo apt-get install qtcreator
+sudo apt-get install qt5-default
+
+# Conver .ui file to .py file
+pyuic5 -x mainwindow.ui -o mainwindow.py
