@@ -25,3 +25,4 @@ Solution: remove current eigen3 and install latest version as described in setup
 # Franka and Kinect
 
 rosrun kinect2_bridge kinect2_bridge _depth_method:=opengl _reg_method:=cpu
+rosrun kinect2_viewer kinect2_viewer sd cloud
