@@ -21,3 +21,7 @@ step 4: Change CMakeLists.txt of the project as format of CMakeLists.txt in cvTe
 ""CUDACC_VER is no longer supported. Use CUDACC_VER_MAJOR, CUDACC_VER_MINOR, and CUDACC_VER_BUILD instead."" 
 is not valid in preprocessor expression..
 Solution: remove current eigen3 and install latest version as described in setups/eigen3.
+
+# Franka and Kinect
+
+rosrun kinect2_bridge kinect2_bridge _depth_method:=opengl _reg_method:=cpu
