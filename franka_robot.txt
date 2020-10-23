@@ -1,3 +1,7 @@
+ franka@snow-white:~$ roslaunch panda_table_launch panda_moveit_interface.launch 
+ aass@FrankaLabDesk1:~/catkin_workspace$ roslaunch panda_table_launch moveit_rviz.launch
+ aass@FrankaLabDesk1:~/catkin_workspace$ roslaunch move_franka move_franka.launch
+
  1957  ssh franka@snow-white -D 12345
  1958  ifconfig
  1959  ssh franka@snow-white -D 12345
