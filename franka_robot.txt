@@ -1,0 +1,101 @@
+ 1957  ssh franka@snow-white -D 12345
+ 1958  ifconfig
+ 1959  ssh franka@snow-white -D 12345
+ 1960  ifconfig
+ 1961  sudo dhclient
+ 1962  cp -r ~/catkin_workspace/src/panda_demos/ .
+ 1963  cd ..
+ 1964  chmod 666 Ubuntu\ 18.04.4\ LTS\ amd64/
+ 1965  cd Ubuntu\ 18.04.4\ LTS\ amd64/
+ 1966  cp -r ~/catkin_workspace/src/panda_demos/ .
+ 1967  sudo mount -o remount ,rw .
+ 1968  sudo mount -o remount ,rw /media/aass/Ubuntu\ 18.04.4\ LTS\ amd64/
+ 1969  dmesg | grep -i panic
+ 1970  sudo df -Th
+ 1971  umount /media/aass/Ubuntu\ 18.04.4\ LTS\ amd64 
+ 1972  cd 
+ 1973  cd ~
+ 1974  cd _
+ 1975  cd /media/aass/
+ 1976  ls
+ 1977  cd 
+ 1978  dosfsck -a /dev/sdc1
+ 1979  sudo dosfsck -a /dev/sdc1
+ 1980  sudo df -Th
+ 1981  sudo dosfsck -a /dev/sdb1
+ 1982  umount /media/aass/Ubuntu\ 18.04.4\ LTS\ amd64 
+ 1983  umount /media/aass/EB46-AF8A /
+ 1984  sudo dosfsck -a /dev/sdb1
+ 1985  sudo df -Th
+ 1986  sudo mount -o remount ,rw /media/aass/EB46-AF8A/
+ 1987  sudo df -Th
+ 1988  sudo mount -o remount ,rw /dev/sdb1
+ 1989  sudo mount -o remount,rw /dev/sdb1
+ 1990  sudo mount -o -f  remount,rw
+ 1991  sudo df -Th
+ 1992  sudo mount -o -f  remount,rw /dev/sdb1
+ 1993  sudo mount -o -f  remount,rw /media/aass/EB46-AF8A/
+ 1994  ssh franka@snow-white -D 12345
+ 1995  ifconfig
+ 1996  sudo dhclient
+ 1997  roslaunch panda_table_launch moveit_rviz.launch 
+ 1998  rostopic
+ 1999  rostopic list
+ 2000  cd catkin_workspace/
+ 2001  source devel/setup.bash 
+ 2002  roslaunch move_franka move_franka.launch 
+ 2003  rosrun move_franka move_franka_node 
+ 2004  roslaunch move_franka move_franka.launch 
+ 2005  roslaunch panda_table_launch moveit_rviz.launch 
+ 2006  history 50
+ 
+  1953  sudo vim /etc/ntp.conf
+ 1954  sudo /etc/init.d/ntp restart
+ 1955  sudo vim /etc/ntp.conf
+ 1956  npdate snow-white
+ 1957  ntpdate snow-white
+ 1958  sudo /etc/ntp.conf
+ 1959  exit
+ 1960  ls
+ 1961  cd workspace/src/franka_ros/franka_gripper/src/
+ 1962  ls
+ 1963  code franka_gripper_node.cpp 
+ 1964  code franka_gripper.cpp 
+ 1965  cd ../..
+ 1966  ls
+ 1967  cd franka_control/
+ 1968  ls
+ 1969  cd sr
+ 1970  code src/franka_control_node.cpp 
+ 1971  ping 192.168.1.117
+ 1972  gedit /etc/hosts
+ 1973  ifconfig
+ 1974  ping 192.168.1.117
+ 1975  gedit /etc/hosts
+ 1976  ping 192.168.1.117
+ 1977  ping 192.168.1.1
+ 1978  roscoer
+ 1979  roscore
+ 1980  ping snow-white
+ 1981  ifconfig
+ 1982  ping snow-white
+ 1983  ping 192.168.1.117
+ 1984  ping 192.168.1.10
+ 1985  roscore
+ 1986  exit
+ 1987  roscore
+ 1988  exit
+ 1989  roscore
+ 1990  exit
+ 1991  roslaunch panda_table_launch panda_moveit_interface.launch 
+ 1992  roscore
+ 1993  ping snow-white
+ 1994  gedit /etc/hosts
+ 1995  ifconfig
+ 1996  ping snow-white
+ 1997  ping 192.168.200.3
+ 1998  gedit ~/.bash_history 
+ 1999  roslaunch panda_table_launch panda_moveit_interface.launch 
+ 2000  sudo vi /etc/hosts
+ 2001  roslaunch panda_table_launch panda_moveit_interface.launch 
+
