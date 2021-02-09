@@ -1,0 +1,4 @@
+hoang@hoang-XPS-13-9360:~$ scp -r tsv@130.243.124.155:~/workspace/src/franka-mm/franka_mm_tools/data /home/hoang
+hoang@hoang-XPS-13-9360:~$ scp -r aass@130.243.124.255:~/Hoang-Cuong/temp/QM_hw2_implementation /home/hoang
+scp -r /media/hoang/HD-PZFU3/Warehouse_Dataset cghg@130.243.124.161:~/datasets 
+scp -r /media/hoang/HD-PZFU3/Warehouse_Dataset cghg@130.243.124.173:~/datasets
