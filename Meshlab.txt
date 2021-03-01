@@ -5,3 +5,6 @@ Remeshing,......-> Surface reconstruction: Ball Pivoting
 # Add a point cloud to another
 Import 2 point clouds
 Filters -> Mesh Layer -> Flatten Visible Layers -> Choose "keep unreference vertives" -> Apply
+
+# mesh to dense point cloud
+Remeshing, simplication, reconstruction -> Midpoint
